@@ -1,4 +1,4 @@
-# Google-Sheet
+# Google-Sheet-Clone
 
 I've made a google sheet clone using HTML, CSS, Javascript 
 
