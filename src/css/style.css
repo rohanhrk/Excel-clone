@@ -1,0 +1,409 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    overflow: hidden;
+}
+
+
+/* =========================================================== Menu container =========================================================== */
+
+.menu-container {
+    height: 8rem;
+    align-items: center;
+}
+
+.option-container {
+    border: 1px solid white;
+    width: 100%;
+    min-height: 5rem;
+    display: flex;
+}
+
+.icon {
+    width: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.function-container {
+    width: calc(100vw - 6rem - 17rem);
+}
+
+.name-container {
+    height: 50%;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.name {
+    font-size: x-large;
+    outline-color: silver;
+    color: green;
+}
+
+.name:hover {
+    border: 1px solid #8080805c;
+}
+
+.nos-container {
+    display: flex;
+    height: 50%;
+    align-items: center;
+}
+
+.nos-container * {
+    height: 100%;
+    width: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: x-large;
+    cursor: pointer;
+}
+
+.new:hover {
+    background-color: rgba(211, 211, 211, 0.389);
+    font-weight: bolder;
+}
+
+.open-me:hover {
+    background-color: rgba(211, 211, 211, 0.389);
+    font-weight: bolder;
+}
+
+.save:hover {
+    background-color: rgba(211, 211, 211, 0.389);
+    font-weight: bolder;
+}
+
+.clock-container {
+    width: 17rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: xx-large;
+}
+
+.clock {
+    color: #43a047;
+    font-family: Orbitron;
+    letter-spacing: 7px;
+}
+
+
+/*  =========================================================== Format container ===========================================================*/
+
+.formate-container {
+    border-top: 1px solid silver;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+}
+
+.font-family {
+    width: 9rem;
+    height: 80%;
+    font-size: larger;
+    border-color: white;
+    border-right: 1px solid silver;
+}
+
+.font-family:hover {
+    background-color: rgba(211, 211, 211, 0.389);
+}
+
+.font-size {
+    width: 4rem;
+    height: 80%;
+    font-size: larger;
+    border-color: white;
+    border-right: 1px solid silver;
+}
+
+.font-size:hover {
+    background-color: rgba(211, 211, 211, 0.389);
+}
+
+.bui-container {
+    display: flex;
+    width: 10rem;
+    justify-content: space-around;
+    align-items: center;
+    height: 80%;
+    font-size: larger;
+    border-color: white;
+    border-right: 1px solid silver;
+}
+
+.bold {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid white;
+}
+
+.bold:hover {
+    background-color: rgba(211, 211, 211, 0.389);
+    font-size: xx-large;
+}
+
+.underline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid white;
+}
+
+.underline:hover {
+    background-color: rgba(211, 211, 211, 0.389);
+    font-size: xx-large;
+}
+
+.italic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid white;
+}
+
+.italic:hover {
+    background-color: rgba(211, 211, 211, 0.389);
+    font-size: xx-large;
+}
+
+.align-container {
+    width: 10rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-right: 1px solid silver;
+    height: 80%;
+}
+
+.left:hover {
+    background-color: rgba(211, 211, 211, 0.389);
+    font-size: xx-large;
+}
+
+.center:hover {
+    background-color: rgba(211, 211, 211, 0.389);
+    font-size: xx-large;
+}
+
+.right:hover {
+    background-color: rgba(211, 211, 211, 0.389);
+    font-size: xx-large;
+}
+
+.color-container {
+    width: 10rem;
+    height: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-right: 1px solid silver;
+}
+
+.font-color:hover {
+    background-color: rgba(211, 211, 211, 0.389);
+    font-size: xx-large;
+}
+
+.bg:hover {
+    background-color: rgba(211, 211, 211, 0.389);
+    font-size: xx-large;
+}
+
+
+/*  =========================================================== Formula / Address bar ===========================================================*/
+
+.formula-container {
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-top: 1px solid silver;
+}
+
+.formula-container>* {
+    height: 90%;
+}
+
+.address-input {
+    width: 8rem;
+    font-size: medium;
+    padding-left: 9px;
+    outline: none;
+    border: white;
+    border-right: 1px solid silver;
+}
+
+.seperator {
+    width: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid silver;
+    opacity: 32%;
+}
+
+.formula-input {
+    width: calc(100vw - 6rem);
+    font-size: medium;
+    padding-left: 9px;
+    outline: none;
+    border: white;
+    border-left: 1px solid silver;
+    opacity: 57%;
+}
+
+
+/* =========================================================== Grid container =========================================================== */
+
+.grid-container {
+    position: relative;
+    height: calc(100vh - ( 8rem + 2rem + 3.2rem));
+    background-color: #13121217;
+    overflow: auto;
+}
+
+.box {
+    height: 26px;
+    width: 4rem;
+    border: 1px solid #0a0a0a21;
+    outline-width: 1px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left_box {
+    background-color: rgba(128, 128, 128, 0.701);
+}
+
+.top_row {
+    display: flex;
+    position: absolute;
+    left: 4rem;
+    top: 0rem;
+    height: 2rem;
+    z-index: 100;
+    background-color: #eaeaea;
+}
+
+.grid {
+    background-color: white;
+    left: 4rem;
+    top: 2rem;
+    position: absolute;
+}
+
+.cell {
+    border: 1px solid #0a0a0a21;
+    outline-width: thin;
+    width: 8rem;
+    height: 26px;
+    outline-color: green;
+    overflow: auto;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.top {
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.row {
+    display: flex;
+}
+
+
+/* =========================================================== Sheet container =========================================================== */
+
+.sheets-container {
+    background-color: #eaeaea;
+    height: 3.2rem;
+    display: flex;
+}
+
+.seperator.bottom {
+    min-width: 4.1rem;
+}
+
+.add-sheet_btn-container {
+    width: 6rem;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 8px;
+    border-right: 1px solid rgba(192, 192, 192, 0.497);
+}
+
+.add {
+    opacity: 68%;
+}
+
+.sheet-list {
+    width: calc(100vw - 3rem);
+    display: flex;
+    overflow: auto;
+}
+
+.sheet-list * {
+    border-right: 1px solid rgba(192, 192, 192, 0.497);
+}
+
+.sheet-list::-webkit-scrollbar {
+    display: none;
+}
+
+.sheet-list {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.sheet {
+    min-width: 8rem;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 11px;
+    font-size: larger;
+}
+
+
+/* =========================================================== ******************** =========================================================== */
+
+.active {
+    background-color: white;
+    color: green;
+    border-bottom: 6px solid green;
+}
+
+.active-btn {
+    background-color: rgba(128, 128, 128, 0.293);
+    border-bottom: 3px solid green;
+}
+
+::-webkit-scrollbar {
+    width: 13px;
+    height: 1rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #00000038;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #575151c9;
+}

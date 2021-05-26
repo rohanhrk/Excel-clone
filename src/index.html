@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+    <div class="menu-container">
+        <div class="option-container">
+            <!-- ================================================================= icon ================================================================= -->
+            <div class="icon">
+                <img src="./icons/google-sheets.png" width="50" height="50" />
+            </div>
+            <div class="function-container">
+                <!-- ================================================================= rename =================================================================-->
+                <div class="name-container">
+                    <div class="name" contenteditable="true">
+                        My sheet
+                    </div>
+                </div>
+
+                <!-- ================================================================= new/open/save =================================================================-->
+                <div class="nos-container">
+                    <div class="new">
+                        New
+                    </div>
+                    <div class="open-me" onclick="myOpenFunction()">
+                        Open
+                    </div>
+                    <input type="file" name="" class="open" id="open" style="display: none;">
+                    <div class="save">
+                        Save
+                    </div>
+                </div>
+            </div>
+
+            <!-- ================================================================= digital clock ================================================================= -->
+            <div class="clock-container">
+                <div id="MyClockDisplay" class="clock" onload="showTime()"></div>
+            </div>
+        </div>
+
+        <div class="formate-container">
+            <!-- ================================================================= font family list ================================================================= -->
+            <select class="font-family">
+                <option value="Arial" style="font-family: Arial, Helvetica, sans-serif;" selected>
+                    Arial
+                </option>
+                <option value="Times New Roman" style="font-family: 'Times New Roman', Times, serif;">
+                    Times New Roman
+                </option>
+                <option value="Arial Narrow" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+                    Arial Narrow
+                </option>
+                <option value="Courier New" style="font-family:'Courier New', Courier, monospace;">
+                    Courier New
+                </option>
+                <option value="Verdana" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">
+                    Verdana
+                </option>
+                <option value="Georgia" style="font-family: Georgia, 'Times New Roman', Times, serif;">
+                    Georgia
+                </option>
+                <option value="Palatino" style="font-family: Palatino;">
+                    Palatino
+                </option>
+                <option value="Garamond" style="font-family: Garamond;">
+                    Garamond
+                </option>
+                <option value="monospace" style="font-family:monospace">
+                    monospace
+                </option>
+                <option value="cursive" style="font-family:cursive;">
+                    cursive
+                </option>
+                <option value="Trebuchet MS" style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
+                    Trebuchet MS
+                </option>
+                <option value="Arial Black" style="font-family: Arial Black;">
+                    Arial Black
+                </option>
+                <option value="Impact" style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">
+                    Impact
+                </option>
+                <option value="Comic Sans MS" style="font-size: Comic Sans MS;">
+                    Comic Sans MS
+                </option>
+            </select>
+
+            <!-- ================================================================= fond size list================================================================ -->
+            <select class="font-size">
+                <option value="12">
+                    12
+                </option>
+                <option value="14">
+                    14
+                </option>
+                <option value="16" selected>
+                    16
+                </option>
+                <option value="18">
+                    18
+                </option>
+                <option value="20">
+                    20
+                </option>
+                <option value="22">
+                    22
+                </option>
+                <option value="24">
+                    24
+                </option>
+                <option value="26">
+                    26
+                </option>
+                <option value="28">
+                    28
+                </option>
+                <option value="30">
+                    30
+                </option>
+                <option value="32">32</option>
+            </select>
+
+            <!-- ================================================================= bold/underline/italic ================================================================= -->
+            <div class="bui-container">
+                <span class="material-icons-outlined material-icons bold" style="cursor: pointer">
+                    format_bold
+                </span>
+                <span class="material-icons-outlined material-icons underline" style="cursor: pointer">
+                    format_underlined
+                </span>
+                <span class="material-icons-outlined material-icons italic" style="cursor: pointer">
+                    format_italic
+                </span>
+            </div>
+
+            <!--================================================================= alignmnet =================================================================-->
+            <div class="align-container">
+                <span class="material-icons-outlined material-icons left" style="cursor: pointer">
+                    format_align_left
+                </span>
+                <span class="material-icons-outlined material-icons center" style="cursor: pointer">
+                    format_align_center
+                </span>
+                <span class="material-icons-outlined material-icons right" style="cursor: pointer">
+                    format_align_right
+                </span>
+            </div>
+
+            <!--================================================================= color =================================================================-->
+            <div class="color-container">
+                <span class="material-icons-outlined material-icons font-color" onclick="colorChangeFunction()" style="cursor: pointer">
+                    format_color_text
+                </span>
+                <input type="color" class="color" id="color" style="display: none;">
+                <span class="material-icons-outlined material-icons bg" onclick="bgColorChangeFunction()" style="cursor: pointer">
+                    format_color_fill
+                </span>
+                <input type="color" class="bg-color" id="bg-color" style="display: none;">
+            </div>
+        </div>
+    </div>
+
+    <!-- ================================================================= address/formula bar ================================================================= -->
+    <div class="formula-container">
+        <input type="text" class="address-input" readonly>
+        <div class="seperator">
+            <img src="./icons/fx.png" height="20" width="20" class="fx">
+        </div>
+        <input type="text" class="formula-input">
+    </div>
+
+    <!-- ================================================================= grid container ================================================================= -->
+    <div class="grid-container">
+        <div class="left_box box top"></div>
+        <div class="top_row">
+            <!--  -->
+        </div>
+        <div class="left_col">
+        </div>
+        <!-- 100 -->
+        <div class="grid">
+            <!-- 100*26 -->
+        </div>
+    </div>
+
+    <!-- ================================================================= sheet container ================================================================= -->
+    <div class="sheets-container">
+        <div class="seperator bottom"></div>
+        <div class="add-sheet_btn-container" style="cursor: pointer">
+            <span class="material-icons-outlined material-icons add">
+                add
+            </span>
+        </div>
+        <div class="sheet-list" style="cursor: pointer">
+            <div class="sheet active" idx="0">
+                Sheet 1
+            </div>
+        </div>
+    </div>
+
+    <!-- ================================================================= javaScript ================================================================= -->
+    <script src="./js/grid.js"></script>
+    <script src="./js/newOpenSave.js"></script>
+    <script src="./js/formula.js"></script>
+    <script src="./js/stack.js"></script>
+    <script src="./js/clock.js"></script>
+
+    <!-- ================================================================= ************************ ================================================================= -->
+    <script>
+        function myOpenFunction() {
+            document.getElementById("open").click();
+        }
+
+        function colorChangeFunction() {
+            document.getElementById("color").click();
+        }
+
+        function bgColorChangeFunction() {
+            document.getElementById("bg-color").click();
+        }
+    </script>
+</body>
+
+</html>
