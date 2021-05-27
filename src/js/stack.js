@@ -50,7 +50,7 @@ function eval(formula) {
         }
 
         // ********** if operator comes **********
-        else if (ch == '-' || ch == '+' || ch == '*' || ch == '/') {
+        else if (ch == '+' || ch == '-' || ch == '*' || ch == '/') {
             while (operators.size() > 0 && operators.peek() != '(' && precedence(ch) <= precedence(operators.peek())) {
                 let operand2 = operands.pop();
                 let operand1 = operands.pop();
@@ -72,6 +72,8 @@ function eval(formula) {
                 let ans = calculate(operand1, operand2, oparator);
                 operands.push(ans);
             }
+
+            // ********** also remove " ( " **********
             if (operators.size() > 0) {
                 operators.pop();
             }
@@ -80,15 +82,15 @@ function eval(formula) {
 
     // ********** if operator stack is not empty **********
     while (operators.size() > 0) {
-        let val2 = operands.pop();
-        let val1 = operands.pop();
-        let op = operators.pop();
+        let operand2 = operands.pop();
+        let operand1 = operands.pop();
+        let oparator = operators.pop();
 
-        let opval = operation(val1, val2, op);
-        operands.push(opval);
+        let ans = calculate(operand1, operand2, oparator);
+        operands.push(ans);
     }
 
-    let val = operands.pop();
+    let val = operands.peek();
     return val;
 
 }
